@@ -10,9 +10,6 @@ import datetime
 
 
 
-
-tableName = "CUSTOMER_INFO10"
-
 #----------------------------
 sc = SparkContext(appName = "WriteRDD_10m")
 sc.addPyFiles("simple_hdfs_writer-0.1-py2.7.egg")
