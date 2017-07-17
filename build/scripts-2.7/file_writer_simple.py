@@ -68,7 +68,7 @@ startTime = datetime.datetime.now()
 #a = df.collect()
 endTime = datetime.datetime.now()
 print("Elapsed Time = {0}".format(endTime-startTime))
-df.write.format("orc").mode("overwrite").saveAsTable(tableName)
+df.write.format("csv").mode("overwrite").saveAsTable(tableName)
 #def toCSVLine(data):
 #  return ','.join(str(d) for d in data)
 #

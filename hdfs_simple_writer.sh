@@ -1,2 +1,2 @@
-dcos spark run --submit-args="--conf spark.mesos.executor.docker.image=mesosphere/spark:1.1.0-2.1.1-hadoop-2.6 https://downloads.mesosphere.com/spark/examples/pi.py 30"
+dcos spark run --submit-args="--conf py-files=https://github.com/markfjohnson/hdfs_pyspark_examples/blob/master/dist/SimpleHDFSwriter-0.1-py2.7.egg https://raw.githubusercontent.com/markfjohnson/hdfs_pyspark_examples/master/file_writer_simple.py"
 

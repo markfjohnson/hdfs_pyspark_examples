@@ -6,6 +6,7 @@ if [ "$c" = "y" ]; then
 	echo yes
 	dcos package install --yes marathon-lb
 	dcos package install --yes kafka
+	dcos package install --yes spark
 	dcos package install --yes --options=hdfs_config.json beta-hdfs
 	dcos package install --options=kibana_config.json --yes beta-kibana
 	dcos package install --options=elastic_config.json --yes beta-elastic

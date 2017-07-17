@@ -6,13 +6,10 @@ from pyspark import Row
 from random import randrange,randint,choice
 import uuid
 import datetime
-import os
 
 
 
 
-print (os.getlogin())
-print (os.getenv("SPARK_HOME","spark home"))
 
 tableName = "CUSTOMER_INFO10"
 
@@ -46,9 +43,6 @@ def buildCustomerRDD(i) :
 a = sc.parallelize(range(1,100))
 rddRows = a.map(lambda i: buildCustomerRDD(i) )
 print(rddRows.toDebugString())
-print("----------- Using the predefined schema")
-
-print("----------- Using the inferred schema")
 
 
 #df.printSchema()
@@ -66,8 +60,3 @@ startTime = datetime.datetime.now()
 endTime = datetime.datetime.now()
 print("Elapsed Time = {0}".format(endTime-startTime))
 df.write.format("csv").mode("overwrite").saveAsTable(tableName)
-#def toCSVLine(data):
-#  return ','.join(str(d) for d in data)
-#
-#lines = df.map(toCSVLine)
-#lines.saveAsTextFile('CustomerInfo')
