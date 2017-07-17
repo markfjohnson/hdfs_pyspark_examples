@@ -1,4 +1,4 @@
-rom pyspark import *
+from pyspark import *
 from pyspark import Row
 
 
