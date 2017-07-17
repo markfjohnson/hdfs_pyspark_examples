@@ -1,0 +1,57 @@
+{
+  "service": {
+    "name": "hdfs",
+    "user": "root",
+    "principal": "hdfs-principal",
+    "deploy_strategy": "parallel",
+    "update_strategy": "serial",
+    "tls": {
+      "enabled": false
+    },
+    "kerberos": {
+      "enabled": false,
+      "primary": "hdfs",
+      "primary_http": "HTTP",
+      "realm": "LOCAL"
+    }
+  },
+  "journal_node": {
+    "cpus": 0.3,
+    "mem": 2048,
+    "disk": 5000,
+    "disk_type": "ROOT"
+  },
+  "name_node": {
+    "cpus": 0.3,
+    "mem": 2048,
+    "disk": 5000,
+    "disk_type": "ROOT"
+  },
+  "zkfc_node": {
+    "cpus": 0.3,
+    "mem": 2048
+  },
+  "data_node": {
+    "count": 3,
+    "cpus": 0.3,
+    "mem": 2048,
+    "disk": 5000,
+    "disk_type": "ROOT"
+  },
+  "hdfs": {
+    "administrators": "core,centos,azureuser",
+    "name_node_rpc_port": 9001,
+    "name_node_http_port": 9002,
+    "zkfc_port": 8019,
+    "journal_node_rpc_port": 8485,
+    "journal_node_http_port": 8480,
+    "data_node_rpc_port": 9003,
+    "data_node_http_port": 9004,
+    "data_node_ipc_port": 9005,
+    "permissions_enabled": false,
+    "name_node_heartbeat_recheck_interval": 60000,
+    "compress_image": true,
+    "image_compression_codec": "org.apache.hadoop.io.compress.SnappyCodec",
+    "hadoop_root_logger": "INFO,console"
+  }
+}

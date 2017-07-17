@@ -1,0 +1,7 @@
+file_writer_simple.py
+setup.py
+SimpleHDFSwriter.egg-info/PKG-INFO
+SimpleHDFSwriter.egg-info/SOURCES.txt
+SimpleHDFSwriter.egg-info/dependency_links.txt
+SimpleHDFSwriter.egg-info/requires.txt
+SimpleHDFSwriter.egg-info/top_level.txt

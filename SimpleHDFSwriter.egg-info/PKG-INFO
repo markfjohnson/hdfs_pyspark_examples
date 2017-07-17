@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: SimpleHDFSwriter
+Version: 0.1
+Summary: This is a Spark write to HDFS Simple Example Package
+Home-page: UNKNOWN
+Author: Mark Johnson
+Author-email: mjohnson@mesosphere.com
+License: PSF
+Description: UNKNOWN
+Keywords: Spark HDFS DCOS Mesos Mesosphere
+Platform: UNKNOWN
