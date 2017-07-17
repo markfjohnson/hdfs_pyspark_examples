@@ -6,15 +6,12 @@ from pyspark import Row
 from random import randrange,randint,choice
 import uuid
 import datetime
-import os
 
 
 
 
-print (os.getlogin())
-print (os.getenv("SPARK_HOME","spark home"))
 
-tableName = "CUSTOMER_INFO10"
+
 
 #----------------------------
 sc = SparkContext(appName = "WriteRDD_10m")
