@@ -1,10 +1,8 @@
-from pyspark import HiveContext
-
 from pyspark import *
 from pyspark import Row
 
 
-from Faker import Factory
+
 from random import randrange,randint,choice
 import uuid
 import datetime
@@ -24,6 +22,7 @@ sc.addPyFiles("simple_hdfs_writer-0.1-py2.7.egg")
 
 
 #----------------------------
+from faker import Factory
 
 rowDef = Row("transGroup","CustomerId","companyGroup","CompanyName","Name","EMAIL","Address","CustomerSince","AnnualSales","LastOrderDate")
 fake = Factory.create()
@@ -39,6 +38,7 @@ def random_date(start, end):
 
 
 def buildCustomerRDD(i) :
+    import faker
     d1 = datetime.date(randrange(2008,2016,1),randrange(1,12,1),1)
     d2 = datetime.date(2016,12,31)
     row = rowDef(i, str(uuid.uuid4()), choice(["GroupA","GroupB","GroupC"]),fake.company(), fake.name(), fake.email(), "ABC",randrange(1990,2016,1), randrange(1000,10000,1000),d1)
