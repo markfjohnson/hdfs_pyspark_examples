@@ -20,7 +20,7 @@ tableName = "CUSTOMER_INFO10"
 
 #----------------------------
 sc = SparkContext(appName = "WriteRDD_10m")
-hc = HiveContext(sc)
+sc.addPyFiles("simple_hdfs_writer-0.1-py2.7.egg")
 
 
 #----------------------------
@@ -51,8 +51,7 @@ print(rddRows.toDebugString())
 print("----------- Using the predefined schema")
 
 print("----------- Using the inferred schema")
-df = hc.inferSchema(rddRows)
-df = hc.createDataFrame(rddRows)
+
 
 #df.printSchema()
 print("----------- \n\n\n\n")
