@@ -4,7 +4,7 @@ from pyspark import *
 from pyspark import Row
 
 
-from faker import Factory
+from Faker import Factory
 from random import randrange,randint,choice
 import uuid
 import datetime
