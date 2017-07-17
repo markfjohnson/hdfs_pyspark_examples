@@ -31,7 +31,7 @@ def random_date(start, end):
     d = start + datetime.timedelta(secRange)
     return(unicode(d))
 
-
+#here
 
 def buildCustomerRDD(i) :
     d1 = datetime.date(randrange(2008,2016,1),randrange(1,12,1),1)
