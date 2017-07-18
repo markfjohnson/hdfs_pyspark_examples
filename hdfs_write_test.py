@@ -43,7 +43,7 @@ def buildCustomerRDD(i) :
 a = sc.parallelize(range(1,100))
 rddRows = a.map(lambda i: buildCustomerRDD(i) )
 print(rddRows.toDebugString())
-
+df = rddRows.toDF()
 
 #df.printSchema()
 print("----------- \n\n\n\n")
