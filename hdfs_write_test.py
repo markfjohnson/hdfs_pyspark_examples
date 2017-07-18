@@ -39,21 +39,7 @@ def buildCustomerRDD(i) :
 #---------------- Begin Main Processing
 a = sc.parallelize(range(1,100))
 rddRows = a.map(lambda i: buildCustomerRDD(i) )
-print(rddRows.toDebugString())
-df = rddRows.toDF()
-
-#df.printSchema()
-print("----------- \n\n\n\n")
-
-
-#hc.sql("CREATE TABLE CUSTOMER_INFO3 (transGroup int,customerId STRING, CompanyName String,contactName String, EMAIL string,Address string,CustomerSince INT, AnnualSales FLOAT,LastOrderDate DATE);")
-
-#df.show()
 print("----------------------")
 
-#print (df.count())
-startTime = datetime.datetime.now()
-#a = df.collect()
-endTime = datetime.datetime.now()
-print("Elapsed Time = {0}".format(endTime-startTime))
-df.write.format("csv").mode("overwrite").saveAsTable(tableName)
+rddRows.saveAsTextFile('hdfs://name-0-node.mesos:9001/tmp/TEST_DATA.csv')
+#df.write.format("csv").mode("overwrite").saveAsTable(tableName)
