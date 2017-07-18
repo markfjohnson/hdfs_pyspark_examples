@@ -41,5 +41,5 @@ a = sc.parallelize(range(1,100))
 rddRows = a.map(lambda i: buildCustomerRDD(i) )
 print("----------------------")
 
-rddRows.saveAsTextFile('hdfs://name-0-node.mesos:9001/tmp/TEST_DATA.csv')
+rddRows.saveAsTextFile('hdfs://name-0-node.mesos:9000/tmp/TEST_DATA.csv')
 #df.write.format("csv").mode("overwrite").saveAsTable(tableName)
